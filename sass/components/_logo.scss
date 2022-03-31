@@ -1,0 +1,24 @@
+.logo {
+  font-family: $secondaryFont;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $accentColor;
+  text-decoration: none;
+}
+.logo__text {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--black {
+    color: $primaryBlackColor;
+  }
+  &--white {
+    color: $primaryWhiteColor;
+  }
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}

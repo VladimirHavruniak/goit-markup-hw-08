@@ -1,0 +1,36 @@
+.benefits {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primaryTitleColor;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  &__tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: $primaryFilterColor;
+    border-radius: 4px;
+  }
+}
+.benefits__item {
+  width: 270px;
+
+  &:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+}

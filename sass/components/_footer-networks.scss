@@ -1,0 +1,22 @@
+.networks__link--white {
+  background: $secondaryIconColor;
+  fill: $primaryWhiteColor;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+// .networks__link--white {
+//   background: $secondaryIconColor;
+//   fill: $primaryWhiteColor;
+
+//   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+// .networks__link--white:hover,
+// .networks__link--white:focus {
+//   background-color: $accentColor;
+// }
