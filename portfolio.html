@@ -21,61 +21,105 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main2.min.css" />
   </head>
 
   <body class="page">
     <!-- header -->
     <header class="header">
-      <div class="container header__content">
+      <div class="container">
         <nav class="header__nav">
           <!-- Logo -->
           <a class="logo header__logo" href="./index.html"
             >Web<span class="logo__text logo__text--black">Studio</span></a
           >
-          <!-- Nav -->
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <div class="site-nav__thumb">
-                <a class="site-nav__link" href="./index.html">Студия</a>
-              </div>
-            </li>
-            <li class="site-nav__item">
-              <div class="site-nav__thumb">
-                <a
-                  class="site-nav__link site-nav__link--current"
-                  href="./portfolio.html"
-                  >Портфолио</a
-                >
-              </div>
-            </li>
-            <li class="site-nav__item">
-              <div class="site-nav__thumb">
-                <a class="site-nav__link" href="">Контакты</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
+          <button
+            type="button"
+            class="menu__button"
+            data-menu-button
+            aria-controls="menu__container"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon__menu"
+                href="./images/icons/sprite.svg#icon-menu"
+              ></use>
+              <use
+                class="icon__cross"
+                href="./images/icons/sprite.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
 
-        <!-- Contacts -->
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <div class="menu__container" data-menu id="menu__container">
+            <!-- Nav -->
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <div class="site-nav__thumb">
+                  <a class="site-nav__link" href="./index.html">Студия</a>
+                </div>
+              </li>
+              <li class="site-nav__item">
+                <div class="site-nav__thumb">
+                  <a
+                    class="site-nav__link site-nav__link--current"
+                    href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </div>
+              </li>
+              <li class="site-nav__item">
+                <div class="site-nav__thumb">
+                  <a class="site-nav__link" href="">Контакты</a>
+                </div>
+              </li>
+            </ul>
+            <!-- Contacts -->
+            <ul class="contacts list">
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link--main"
+                  href="tel:+380961111111"
+                >
+                  <svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link--secondary"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <!-- Links -->
+            <ul class="nets__list">
+              <li class="nets__item">
+                <a href="" class="nets__link">Instagram</a>
+              </li>
+              <li class="nets__item">
+                <a href="" class="nets__link">Twitter</a>
+              </li>
+              <li class="nets__item">
+                <a href="" class="nets__link">Facebook</a>
+              </li>
+              <li class="nets__item">
+                <a href="" class="nets__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -124,9 +168,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/texnocrack.jpg"
+                    srcset="
+                      ./images/my-works/texnocrack-s.jpg   450w,
+                      ./images/my-works/texnocrack-s2x.jpg 900w,
+                      ./images/my-works/texnocrack-m.jpg   354w,
+                      ./images/my-works/texnocrack-m2x.jpg 708w,
+                      ./images/my-works/texnocrack-l.jpg   370w,
+                      ./images/my-works/texnocrack-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/texnocrack-s.jpg"
                     alt="Ноутбук с анкетами"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -148,9 +200,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/neworlean-goldenstar.jpg"
+                    srcset="
+                      ./images/my-works/neworlean-goldenstar-s.jpg   450w,
+                      ./images/my-works/neworlean-goldenstar-s2x.jpg 900w,
+                      ./images/my-works/neworlean-goldenstar-m.jpg   354w,
+                      ./images/my-works/neworlean-goldenstar-m2x.jpg 708w,
+                      ./images/my-works/neworlean-goldenstar-l.jpg   370w,
+                      ./images/my-works/neworlean-goldenstar-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/neworlean-goldenstar-s.jpg"
                     alt="Два баскетболиста"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -172,9 +232,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/restouran-goldenfood.jpg"
+                    srcset="
+                      ./images/my-works/restouran-goldenfood-s.jpg   450w,
+                      ./images/my-works/restouran-goldenfood-s2x.jpg 900w,
+                      ./images/my-works/restouran-goldenfood-m.jpg   354w,
+                      ./images/my-works/restouran-goldenfood-m2x.jpg 708w,
+                      ./images/my-works/restouran-goldenfood-l.jpg   370w,
+                      ./images/my-works/restouran-goldenfood-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/restouran-goldenfood-s.jpg"
                     alt="Логотип Seafood"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -196,9 +264,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/project-prime.jpg"
+                    srcset="
+                      ./images/my-works/project-prime-s.jpg   450w,
+                      ./images/my-works/project-prime-s2x.jpg 900w,
+                      ./images/my-works/project-prime-m.jpg   354w,
+                      ./images/my-works/project-prime-m2x.jpg 708w,
+                      ./images/my-works/project-prime-l.jpg   370w,
+                      ./images/my-works/project-prime-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/project-prime-s.jpg"
                     alt="Черные наушники"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -220,9 +296,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/project-boxes.jpg"
+                    srcset="
+                      ./images/my-works/project-boxes-s.jpg   450w,
+                      ./images/my-works/project-boxes-s2x.jpg 900w,
+                      ./images/my-works/project-boxes-m.jpg   354w,
+                      ./images/my-works/project-boxes-m2x.jpg 708w,
+                      ./images/my-works/project-boxes-l.jpg   370w,
+                      ./images/my-works/project-boxes-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/project-boxes-s.jpg"
                     alt=" Белая и карасная коробки"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -244,9 +328,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/inspiration-hasno-Borders.jpg"
+                    srcset="
+                      ./images/my-works/inspiration-hasno-Borders-s.jpg   450w,
+                      ./images/my-works/inspiration-hasno-Borders-s2x.jpg 900w,
+                      ./images/my-works/inspiration-hasno-Borders-m.jpg   354w,
+                      ./images/my-works/inspiration-hasno-Borders-m2x.jpg 708w,
+                      ./images/my-works/inspiration-hasno-Borders-l.jpg   370w,
+                      ./images/my-works/inspiration-hasno-Borders-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/inspiration-hasno-Borders-s.jpg"
                     alt="Монитор с картой"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -268,9 +360,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/limited-edition.jpg"
+                    srcset="
+                      ./images/my-works/limited-edition-s.jpg   450w,
+                      ./images/my-works/limited-edition-s2x.jpg 900w,
+                      ./images/my-works/limited-edition-m.jpg   354w,
+                      ./images/my-works/limited-edition-m2x.jpg 708w,
+                      ./images/my-works/limited-edition-l.jpg   370w,
+                      ./images/my-works/limited-edition-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/limited-edition-s.jpg"
                     alt="Книга Limited Edition"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -292,9 +392,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/project-lab.jpg"
+                    srcset="
+                      ./images/my-works/project-lab-s.jpg   450w,
+                      ./images/my-works/project-lab-s2x.jpg 900w,
+                      ./images/my-works/project-lab-m.jpg   354w,
+                      ./images/my-works/project-lab-m2x.jpg 708w,
+                      ./images/my-works/project-lab-l.jpg   370w,
+                      ./images/my-works/project-lab-l2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/project-lab-s.jpg"
                     alt="Листочек LAB EL TAG"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -316,9 +424,17 @@
                 <div class="works__examples">
                   <img
                     class="works__image"
-                    src="./images/my-works/growing-business.jpg"
+                    srcset="
+                      ./images/my-works/growing-business-s.jpg   450w,
+                      ./images/my-works/growing-business-s2x.jpg 900w,
+                      ./images/my-works/growing-business-s.jpg   354w,
+                      ./images/my-works/growing-business-s2x.jpg 708w,
+                      ./images/my-works/growing-business-s.jpg   370w,
+                      ./images/my-works/growing-business-s2x.jpg 740w
+                    "
+                    sizes="(min-width:1200px) 370w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                    src="./images/my-works/growing-business-s.jpg"
                     alt="Человек сидит за ноутбуком"
-                    width="370px"
                   />
                   <div class="works__overlay">
                     <p class="works__text">
@@ -433,5 +549,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

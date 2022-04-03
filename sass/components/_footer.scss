@@ -1,32 +1,96 @@
+// .footer {
+//   padding-bottom: 60px;
+//   padding-top: 60px;
+
+//   background: $secondaryBgColor;
+
+//   &__content {
+//     display: flex;
+//     align-items: baseline;
+//   }
+//   &__logo {
+//     margin-bottom: 20px;
+//     display: inline-block;
+//   }
+//   &__contacts {
+//     margin-right: 70px;
+//   }
+//   &__network {
+//     margin-right: 93px;
+//   }
+//   &__text {
+//     margin-bottom: 20px;
+
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     text-transform: uppercase;
+
+//     color: $primaryWhiteColor;
+//   }
+// }
+
 .footer {
   padding-bottom: 60px;
   padding-top: 60px;
 
   background: $secondaryBgColor;
 
-  &__content {
-    display: flex;
-    align-items: baseline;
+  @media screen and (max-width:1199px) {
+    text-align: center;
   }
+  &__content {
+    @media screen and (min-width:1200px) {
+      display: flex;
+      align-items: baseline;      
+    }
+  }
+  &__wrapper{
+    @media screen and (min-width:768px) {
+      display: flex;
+      align-items: baseline;
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      justify-content: space-around;
+      margin-bottom: 60px;
+    }
+  }
+
   &__logo {
     margin-bottom: 20px;
     display: inline-block;
   }
-  &__contacts {
-    margin-right: 70px;
-  }
+
+   &__contacts {
+      @media screen and (max-width:767px) {
+      margin-bottom: 60px;
+      }
+      @media screen and (min-width:768px) and (max-width:1199px) {
+        display: inline-block;
+      }
+      @media screen and (min-width:1200px) {
+        margin-right: 70px;
+      }
+   }
   &__network {
-    margin-right: 93px;
+    @media screen and (min-width:1200px) {
+      margin-right: 93px;
+    }
+    @media screen and (max-width:767px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+      display: inline-block;
+    }
   }
-  &__text {
-    margin-bottom: 20px;
+   &__text {
+     margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
+     font-weight: 700;
+     font-size: 14px;
+     line-height: 1.14;
+     text-transform: uppercase;
 
-    color: $primaryWhiteColor;
-  }
+     color: $primaryWhiteColor;
+    }
 }
-

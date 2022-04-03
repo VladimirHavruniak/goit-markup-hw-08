@@ -1,0 +1,49 @@
+.menu{    
+}
+.menu__button{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+.menu__container{
+    
+
+    @media screen and (max-width:767px) {
+        display: none;
+        position: absolute;
+        z-index: 5;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 768px;
+        padding: 48px 40px;
+        
+        background-color: white;
+    }
+    @media screen and (min-width:768px){
+        display: flex;
+        align-items: center;
+    }
+    
+    &.is-open {
+        display: block;
+    }
+}
+.icon__cross{
+    display: none;
+
+    .menu__button.is-open &{
+        display: block;
+    }
+}
+.icon__menu{
+    .menu__button.is-open & {
+        display: none;
+    }
+}

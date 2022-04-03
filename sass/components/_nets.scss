@@ -1,0 +1,30 @@
+.nets__list{
+    display: flex;
+    @media screen and (min-width: 768px){
+        display: none;
+    }
+}
+.nets__item
+{
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+.nets__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accentColor;
+}
+.nets__link::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 50%;
+
+    width: 22px;
+    border-top: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+}

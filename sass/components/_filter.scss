@@ -1,12 +1,25 @@
 .filter {
   margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 
   &__item:not(:last-child) {
     margin-right: 8px;
   }
+
+  .filter__item {
+    @media screen and (max-width:767px) {
+      &:not(:nth-last-child(-n+2)) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @media screen and (min-width:768px) {
+    justify-content: center;
+  }
 }
+
 .filter__button {
   border-radius: 4px;
   padding-bottom: 6px;
@@ -37,5 +50,3 @@
     background-color: $accentColor;
   }
 }
-
-

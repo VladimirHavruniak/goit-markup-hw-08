@@ -1,16 +1,16 @@
 .header {
   border-bottom: 1px solid $primaryBorderColor;
+  position: relative;
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-  }
   &__nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   &__logo {
-    margin-right: 93px;
+    display: flex;
+    align-items: center;
+    height: 60px;
   }
 }
 

@@ -21,23 +21,17 @@ ul {
 }
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 a {
   color: inherit;
+  text-decoration: none;
 }
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .visually-hidden {
   position: absolute;

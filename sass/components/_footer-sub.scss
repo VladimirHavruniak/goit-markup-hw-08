@@ -1,14 +1,69 @@
+// .sub {
+//   &__form {
+//     display: flex;
+//     align-items: flex-end;
+//   }
+//   &__wrapper {
+//     margin-right: 12px;
+//   }
+//   &__text {
+//     display: block;
+//   }
+//   &__button {
+//     padding-left: 29px;
+//     padding-right: 62px;
+//     border-radius: 4px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+//     min-width: 200px;
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 1.87;
+//     align-items: center;
+//     letter-spacing: 0.06em;
+//     cursor: pointer;
+//   }
+//   &__input {
+//     width: 358px;
+//     height: 50px;
+//     padding: 15px 16px;
+//     outline: none;
+
+//     font-size: 14px;
+//     line-height: 1.14px;
+//     letter-spacing: 0.01em;
+//     color: $primaryWhiteColor;
+
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//     border-radius: 4px;
+//     background-color: transparent;
+//   }
+//   &__icon {
+//     position: absolute;
+//     top: 13px;
+//     right: 28px;
+//   }
+// }
+// .button__wrapper {
+//   position: relative;
+// }
 .sub {
   &__form {
-    display: flex;
-    align-items: flex-end;
+    @media screen and (min-width:1200px) {
+      display: flex;
+      align-items: flex-end;
+    }
   }
   &__wrapper {
-    margin-right: 12px;
+    @media screen and (min-width:1200px) {
+      margin-right: 12px;
+    }
   }
   &__text {
     display: block;
   }
+
   &__button {
     padding-left: 29px;
     padding-right: 62px;
@@ -23,10 +78,17 @@
     letter-spacing: 0.06em;
     cursor: pointer;
   }
+
   &__input {
-    width: 358px;
+    @media screen and (max-width:1199px) {
+      width: 450px;
+    }
+    @media screen  and (min-width:1200px) {
+      width: 358px;
+    }
     height: 50px;
     padding: 15px 16px;
+
     outline: none;
 
     font-size: 14px;
@@ -38,14 +100,20 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: transparent;
+
+    @media screen and (max-width:1199px) {
+      margin-bottom: 20px;
+    }
   }
+
   &__icon {
     position: absolute;
     top: 13px;
     right: 28px;
   }
 }
+
 .button__wrapper {
+  display: inline-block;
   position: relative;
 }
-

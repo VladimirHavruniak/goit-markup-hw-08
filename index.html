@@ -20,62 +20,107 @@
       referrerpolicy="no-referrer"
     />
 
-    
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main2.min.css" />
   </head>
 
   <body class="page">
     <!-- header -->
     <header class="header">
-      <div class="container header__content">
+      <div class="container">
         <nav class="header__nav">
           <!-- Logo -->
           <a class="logo header__logo" href="./index.html"
             >Web<span class="logo__text logo__text--black">Studio</span></a
           >
-          <!-- Nav -->
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <div class="site-nav__thumb">
-                <a
-                  class="site-nav__link site-nav__link--current"
-                  href="./index.html"
-                  >Студия</a
-                >
-              </div>
-            </li>
-            <li class="site-nav__item">
-              <div class="site-nav__thumb">
-                <a class="site-nav__link" href="./portfolio.html">Портфолио</a>
-              </div>
-            </li>
-            <li class="site-nav__item">
-              <div class="site-nav__thumb">
-                <a class="site-nav__link" href="">Контакты</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
+          <button
+            type="button"
+            class="menu__button"
+            data-menu-button
+            aria-controls="menu__container"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon__menu"
+                href="./images/icons/sprite.svg#icon-menu"
+              ></use>
+              <use
+                class="icon__cross"
+                href="./images/icons/sprite.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
 
-        <!-- Contacts -->
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <div class="menu__container" data-menu id="menu__container">
+            <!-- Nav -->
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <div class="site-nav__thumb">
+                  <a
+                    class="site-nav__link site-nav__link--current"
+                    href="./index.html"
+                    >Студия</a
+                  >
+                </div>
+              </li>
+              <li class="site-nav__item">
+                <div class="site-nav__thumb">
+                  <a class="site-nav__link" href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </div>
+              </li>
+              <li class="site-nav__item">
+                <div class="site-nav__thumb">
+                  <a class="site-nav__link" href="">Контакты</a>
+                </div>
+              </li>
+            </ul>
+            <!-- Contacts -->
+            <ul class="contacts list">
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link--main"
+                  href="tel:+380961111111"
+                >
+                  <svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link--secondary"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <!-- Links -->
+            <ul class="nets__list">
+              <li class="nets__item">
+                <a href="" class="nets__link">Instagram</a>
+              </li>
+              <li class="nets__item">
+                <a href="" class="nets__link">Twitter</a>
+              </li>
+              <li class="nets__item">
+                <a href="" class="nets__link">Facebook</a>
+              </li>
+              <li class="nets__item">
+                <a href="" class="nets__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <!-- main studio -->
@@ -239,7 +284,7 @@
         </div>
       </section>
       <!-- work list -->
-      <section class="section">
+      <section class="section work">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
 
@@ -247,6 +292,10 @@
             <li class="work__item">
               <div class="work__thumb">
                 <img
+                  srcset="
+                    ./images/our_work/our_work_1.jpg    1x,
+                    ./images/our_work/our_work_1@2x.jpg 2x
+                  "
                   src="./images/our_work/our_work_1.jpg"
                   alt="Планшет и клавиатура"
                   width="370"
@@ -257,6 +306,10 @@
             <li class="work__item">
               <div class="work__thumb">
                 <img
+                  srcset="
+                    ./images/our_work/our_work_2.jpg    1x,
+                    ./images/our_work/our_work_2@2x.jpg 2x
+                  "
                   src="./images/our_work/our_work_2.jpg"
                   alt="Ноутбук и телефон"
                   width="370"
@@ -267,6 +320,10 @@
             <li class="work__item">
               <div class="work__thumb">
                 <img
+                  srcset="
+                    ./images/our_work/our_work_3.jpg    1x,
+                    ./images/our_work/our_work_3@2x.jpg 2x
+                  "
                   src="./images/our_work/our_work_3.jpg"
                   alt="Цветная панель"
                   width="370"
@@ -284,10 +341,18 @@
           <ul class="workers__list list">
             <li class="workers__item">
               <img
-                class="image"
-                src="./images/our_team/first_worker.jpg "
+                class="image workers__image"
+                srcset="
+                  ./images/our_team/first_worker-s.jpg   450w,
+                  ./images/our_team/first_worker-s2x.jpg 900w,
+                  ./images/our_team/first_worker-m.jpg   354w,
+                  ./images/our_team/first_worker-m2x.jpg 708w,
+                  ./images/our_team/first_worker-l.jpg   270w,
+                  ./images/our_team/first_worker-l2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                src="./images/our_team/first_worker-s.jpg "
                 alt="работник Игорь Демьяненко"
-                width="270"
               />
               <div class="workers__description">
                 <h3 class="workers__title">Игорь Демьяненко</h3>
@@ -334,10 +399,18 @@
             </li>
             <li class="workers__item">
               <img
-                class="image"
-                src="./images/our_team/second_worker.jpg"
+                class="image workers__image"
+                srcset="
+                  ./images/our_team/second_worker-s.jpg   450w,
+                  ./images/our_team/second_worker-s2x.jpg 900w,
+                  ./images/our_team/second_worker-m.jpg   354w,
+                  ./images/our_team/second_worker-m2x.jpg 708w,
+                  ./images/our_team/second_worker-l.jpg   270w,
+                  ./images/our_team/second_worker-l2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                src="./images/our_team/second_worker-s.jpg"
                 alt="работник Ольга Репина"
-                width="270"
               />
               <div class="workers__description">
                 <h3 class="workers__title">Ольга Репина</h3>
@@ -384,10 +457,18 @@
             </li>
             <li class="workers__item">
               <img
-                class="image"
-                src="./images/our_team/third_worker.jpg"
+                class="image workers__image"
+                srcset="
+                  ./images/our_team/third_worker-s.jpg   450w,
+                  ./images/our_team/third_worker-s2x.jpg 900w,
+                  ./images/our_team/third_worker-m.jpg   354w,
+                  ./images/our_team/third_worker-m2x.jpg 708w,
+                  ./images/our_team/third_worker-l.jpg   270w,
+                  ./images/our_team/third_worker-l2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
+                src="./images/our_team/third_worker-s.jpg"
                 alt="работник Николай Тарасов"
-                width="270"
               />
               <div class="workers__description">
                 <h3 class="workers__title">Николай Тарасов</h3>
@@ -434,10 +515,18 @@
             </li>
             <li class="workers__item">
               <img
-                class="image"
+                class="image workers__image"
+                srcset="
+                  ./images/our_team/fourth_worker-s.jpg   450w,
+                  ./images/our_team/fourth_worker-s2x.jpg 900w,
+                  ./images/our_team/fourth_worker-m.jpg   354w,
+                  ./images/our_team/fourth_worker-m2x.jpg 708w,
+                  ./images/our_team/fourth_worker-l.jpg   270w,
+                  ./images/our_team/fourth_worker-l2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270w, (min-width:768px) 354w, (min-width:480px) 450w, 100vw"
                 src="./images/our_team/fourth_worker.jpg"
                 alt="работник Михаил Ермаков"
-                width="270"
               />
               <div class="workers__description">
                 <h3 class="workers__title">Михаил Ермаков</h3>
@@ -545,69 +634,75 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container footer__content">
-        <!-- Contact us -->
-        <div class="footer__contacts">
-          <a class="logo footer__logo" href="./index.html"
-            >Web<span class="logo__text logo__text--white">Studio</span></a
-          >
+        <div class="footer__wrapper">
+          <!-- Contact us -->
+          <div class="footer__contacts">
+            <a class="logo footer__logo" href="./index.html"
+              >Web<span class="logo__text logo__text--white">Studio</span></a
+            >
 
-          <address class="contacts-bottom">
-            <ul class="list">
-              <li class="contacts-bottom__item">
-                <a
-                  class="contacts-bottom__geolocation"
-                  href="https://www.google.com/maps/d/u/0/viewer?msa=0&mid=10uSM3H-mIU3GznYo2szRIEphczw&ll=50.42732700000001%2C30.538092&z=17"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >г. Киев, пр-т Леси Украинки, 26
+            <address class="contacts-bottom">
+              <ul class="list">
+                <li class="contacts-bottom__item">
+                  <a
+                    class="contacts-bottom__geolocation"
+                    href="https://www.google.com/maps/d/u/0/viewer?msa=0&mid=10uSM3H-mIU3GznYo2szRIEphczw&ll=50.42732700000001%2C30.538092&z=17"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="contacts-bottom__item">
+                  <a
+                    class="contacts-bottom__link"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="contacts-bottom__item">
+                  <a class="contacts-bottom__link" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <!-- Network -->
+          <div class="footer__network">
+            <p class="footer__text">присоединяйтесь</p>
+            <ul class="networks__list">
+              <li class="networks__item">
+                <a class="networks__link networks__link--white" href="">
+                  <svg class="networks__icon" width="20px" height="20px">
+                    <use
+                      href="./images/icons/sprite.svg#icon-instagram-2"
+                    ></use>
+                  </svg>
                 </a>
               </li>
-              <li class="contacts-bottom__item">
-                <a class="contacts-bottom__link" href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+              <li class="networks__item">
+                <a class="networks__link networks__link--white" href="">
+                  <svg class="networks__icon" width="20px" height="20px">
+                    <use href="./images/icons/sprite.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="contacts-bottom__item">
-                <a class="contacts-bottom__link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="networks__item">
+                <a class="networks__link networks__link--white" href="">
+                  <svg class="networks__icon" width="20px" height="20px">
+                    <use href="./images/icons/sprite.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a class="networks__link networks__link--white" href="">
+                  <svg class="networks__icon" width="20px" height="20px">
+                    <use href="./images/icons/sprite.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <!-- Network -->
-        <div class="footer__network">
-          <p class="footer__text">присоединяйтесь</p>
-          <ul class="networks__list">
-            <li class="networks__item">
-              <a class="networks__link networks__link--white" href="">
-                <svg class="networks__icon" width="20px" height="20px">
-                  <use href="./images/icons/sprite.svg#icon-instagram-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a class="networks__link networks__link--white" href="">
-                <svg class="networks__icon" width="20px" height="20px">
-                  <use href="./images/icons/sprite.svg#icon-twitter-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a class="networks__link networks__link--white" href="">
-                <svg class="networks__icon" width="20px" height="20px">
-                  <use href="./images/icons/sprite.svg#icon-facebook-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a class="networks__link networks__link--white" href="">
-                <svg class="networks__icon" width="20px" height="20px">
-                  <use href="./images/icons/sprite.svg#icon-linkedin-1"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <!-- Subcription -->
         <div class="footer__sub">
@@ -637,5 +732,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,21 +1,50 @@
+// .workers {
+//   &__list {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+//   &__item {
+//     background-color: $primaryWhiteColor;
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//       0px 2px 1px rgba(0, 0, 0, 0.2);
+//     border-radius: 0px 0px 4px 4px;
+//   }
+//   &__item:not(:nth-child(4n)) {
+//     margin-right: 30px;
+//   }
+//   &__description {
+//     padding-top: 30px;
+//     padding-bottom: 30px;
+//   }
+//   &__title {
+//     margin-bottom: 10px;
+
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 1.19;
+//     color: $primaryTitleColor;
+//     text-align: center;
+//   }
+//   &__text {
+//     margin-bottom: 16px;
+
+//     font-weight: 400;
+//     font-size: 16px;
+//     line-height: 19px;
+//     text-align: center;
+//   }
+// }
 .workers {
   &__list {
     display: flex;
     flex-wrap: wrap;
   }
-  &__item {
-    background-color: $primaryWhiteColor;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-  }
-  &__item:not(:nth-child(4n)) {
-    margin-right: 30px;
-  }
+
   &__description {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
   &__title {
     margin-bottom: 10px;
 
@@ -25,6 +54,7 @@
     color: $primaryTitleColor;
     text-align: center;
   }
+
   &__text {
     margin-bottom: 16px;
 
@@ -34,4 +64,41 @@
     text-align: center;
   }
 }
-
+.workers__item{
+  background-color: $primaryWhiteColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  
+  @media screen and (max-width:767px) {
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width:768px) and (max-width:1199px){
+    &:nth-child(2n+1)
+    {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n+2)){
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width:1200px) {
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+}
+.workers__image{
+  @media screen and (max-width:767px) {
+    width: 450px;
+  }
+  @media screen and (min-width:768px) and (max-width:1199px){
+    width: 354px;
+  }
+  @media screen and (min-width:1200px) {
+    width: 270px;
+  }
+}
