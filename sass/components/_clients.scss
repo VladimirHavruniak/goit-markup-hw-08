@@ -62,7 +62,7 @@
     border: 1px solid $accentColor;
   }
   &:not(:last-child){
-    @media screen and (max-width:450px) {
+    @media screen and (max-width:479px) {
       margin-bottom: 30px;
     }
   }

@@ -1141,7 +1141,7 @@ ul {
   border: 1px solid #2196f3;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 479px) {
   .clients__item:not(:last-child) {
     margin-bottom: 30px;
   }
