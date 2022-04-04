@@ -47,11 +47,14 @@
 
   &__text {
     display: block;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.56;
     padding: 63px 24px;
 
     color: $primaryWhiteColor;
+    @media screen and (min-width:480px) {
+      font-size: 18px;
+    }
   }
 
   &__border {
